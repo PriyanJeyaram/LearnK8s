@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-app
+  labels:
+    app: my-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      tier: fe
+  template:
+    metadata:
+      name: nginx-using-yaml
+      labels:
+        tier: fe
+    spec:
+      containers:
+        - name: nginx-using-yaml
+          image: redis
