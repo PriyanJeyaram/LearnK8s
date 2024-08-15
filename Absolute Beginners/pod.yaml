@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-using-yaml
+  name: myapp-nginx
   labels:
     app: nginx
     tier: fe
