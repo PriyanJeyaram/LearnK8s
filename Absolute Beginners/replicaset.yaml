@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
         - name: nginx-using-yaml
-          image: redis
+          image: nginx
