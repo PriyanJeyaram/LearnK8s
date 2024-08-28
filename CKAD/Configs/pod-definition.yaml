@@ -12,9 +12,7 @@ spec:
           cpu: "500m"
       ports:
         - containerPort: 8080
-      env:
-        - name: APP_COLOR
-          valueFrom:
-            configMapKeyRef:
-              name: app-config
-              key: APP_COLOR
+      volumes:
+        - name: app-config-volume
+          configMap:
+            name: app-config
